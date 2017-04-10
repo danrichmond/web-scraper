@@ -1,0 +1,19 @@
+import urllib2
+from bs4 import BeautifulSoup
+
+# Change this URL to scrape you website! This lets Beautiful Soup know
+# what website your want to scrape
+quote_page = 'http://www.iup.edu/isds/faculty/'
+page = urllib2.urlopen(quote_page)
+
+# This extracts the html from the website
+soup = BeautifulSoup(page, 'html.parser')
+
+# Update the class here to find your data. This searches the html parsed above
+# and finds the data associated with the class you specify
+number_box = soup.findAll(attrs={'class':['given-name','family-name','tel']})
+
+# Loops through the found data and prints it out
+for product in number_box:
+        number = product.text.strip()
+        print number
