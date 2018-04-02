@@ -17,4 +17,3 @@ number_box = soup.findAll(attrs={'class':['given-name','family-name','tel']}) # 
 for product in number_box:
         number = product.text.strip()
         print number
-yello
