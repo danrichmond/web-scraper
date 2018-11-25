@@ -1,4 +1,5 @@
-# web-scraper
+# web-scraper Python 2.7.10
+
 Simple web scraper practice. I plan to create a more complex analytical scraper in the future.
 
 I made use of the Beautiful Soup library to pull data from the site.
