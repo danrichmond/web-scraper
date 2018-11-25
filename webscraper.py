@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 # Change this URL to scrape you website! This lets Beautiful Soup know
 # what website your want to scrape
-quote_page = ‘Enter your URL here.‘ # Enter your URL on this line
+quote_page = 'Enter your URL here.' # Enter your URL on this line
 page = urllib2.urlopen(quote_page)
 
 # This extracts the html from the website
@@ -17,5 +17,3 @@ number_box = soup.findAll(attrs={'class':['given-name','family-name','tel']}) # 
 for product in number_box:
         number = product.text.strip()
         print number
-
-hello1234
